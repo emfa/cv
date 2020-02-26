@@ -4,7 +4,7 @@ clean:
 	rm -f cv.html cv.pdf cv.7
 
 cv.html: cv.mdoc
-	mandoc -T html < cv.mdoc > $@
+	mandoc -T html -O style=style.css < cv.mdoc > $@
 
 cv.pdf: cv.mdoc
 	mandoc -T pdf < cv.mdoc > $@
