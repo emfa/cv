@@ -1,4 +1,4 @@
-@import url("style.css")
+@import url("style.css");
 
 table.head, table.foot { width: 100%; }
 td.head-rtitle, td.foot-os { text-align: right; }

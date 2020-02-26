@@ -1,7 +1,7 @@
 all: cv.html cv.pdf cv.7
 
-publish: cv.html
-	doas cp cv.html /var/www/htdocs/emfa.nu/
+publish: cv.html cv.css
+	doas cp cv.html cv.css /var/www/htdocs/emfa.nu/
 
 clean:
 	rm -f cv.html cv.pdf cv.7
