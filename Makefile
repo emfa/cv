@@ -1,10 +1,13 @@
 all: cv.html cv.pdf cv.7
 
+publish: cv.html
+	doas cp cv.html /var/www/htdocs/emfa.nu/
+
 clean:
 	rm -f cv.html cv.pdf cv.7
 
 cv.html: cv.mdoc
-	mandoc -T html -O style=style.css < cv.mdoc > $@
+	mandoc -T html -O style=cv.css < cv.mdoc > $@
 
 cv.pdf: cv.mdoc
 	mandoc -T pdf < cv.mdoc > $@
@@ -12,4 +15,4 @@ cv.pdf: cv.mdoc
 cv.7: cv.mdoc
 	mandoc < cv.mdoc > $@
 
-.PHONY: all clean
+.PHONY: all publish clean
