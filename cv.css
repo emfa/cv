@@ -11,4 +11,4 @@ code.Nm, .Fl, .Cm, .Ic, code.In, .Fd, .Fn, .Cd {
 	font-weight: bold;
       	font-family: inherit;
 }
-
+.Sh { width: 80em; }
